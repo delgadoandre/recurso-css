@@ -3,175 +3,174 @@
 
 <head>
 
-    <!-- Define o conjunto de caracteres utilizado pela página -->
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
 
-    <!-- Permite que a página se adapte a celulares, tablets e computadores -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Título que aparece na aba do navegador -->
-    <title>Introdução ao CSS - Recurso Educacional</title>
+<title>Introdução ao CSS - Recurso Educacional Aberto</title>
 
 
-    <!--
-        CSS INTERNO
+<style>
 
-        Nesta parte definimos a aparência visual da página.
-        O CSS é responsável por cores, fontes, espaçamentos
-        e organização dos elementos.
-    -->
-    <style>
+/* ===============================
+   CONFIGURAÇÕES GERAIS DA PÁGINA
+   =============================== */
 
-        /*
-            Configuração geral da página.
-            Define fonte, cor de fundo e espaçamento.
-        */
-        body {
+body {
 
-            font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 
-            background-color: #f2f2f2;
+    background:#f2f5f8;
 
-            margin: 0;
+    margin:0;
 
-            padding: 20px;
+    padding:20px;
 
-            line-height: 1.6;
-        }
+    line-height:1.6;
+
+}
 
 
-        /*
-            Área principal do recurso educacional.
-            Criamos um "cartão" branco para facilitar
-            a leitura do conteúdo.
-        */
-        .container {
+.container {
 
-            max-width: 900px;
+    max-width:900px;
 
-            margin: auto;
+    margin:auto;
 
-            background-color: white;
+    background:white;
 
-            padding: 30px;
+    padding:30px;
 
-            border-radius: 10px;
+    border-radius:12px;
 
-            box-shadow: 0px 0px 10px #ccc;
-        }
+    box-shadow:0 0 15px #ccc;
+
+}
 
 
-        /*
-            Título principal.
-        */
-        h1 {
 
-            color: #1565c0;
+h1 {
 
-            text-align: center;
-        }
+    color:#1565c0;
 
+    text-align:center;
 
-        /*
-            Títulos das seções.
-        */
-        h2 {
-
-            color: #333;
-
-            border-bottom: 2px solid #1565c0;
-
-            padding-bottom: 5px;
-        }
+}
 
 
-        /*
-            Caixa utilizada para apresentar
-            um exemplo visual de CSS.
-        */
-        .exemplo-css {
+h2 {
 
-            background-color: #1565c0;
+    color:#0d47a1;
 
-            color: white;
+    border-bottom:2px solid #1565c0;
 
-            padding: 20px;
+    padding-bottom:5px;
 
-            text-align: center;
-
-            border-radius: 8px;
-
-            margin: 20px 0;
-        }
+}
 
 
-        /*
-            Estilização do botão do quiz.
-        */
-        button {
+.box {
 
-            background-color: #1565c0;
+    background:#e3f2fd;
 
-            color: white;
+    padding:20px;
 
-            border: none;
+    border-radius:8px;
 
-            padding: 12px 20px;
+    margin:20px 0;
 
-            border-radius: 5px;
-
-            cursor: pointer;
-
-            font-size: 16px;
-        }
+}
 
 
-        /*
-            Quando o usuário passa o mouse no botão,
-            alteramos sua aparência.
-        */
-        button:hover {
+/* Exemplo visual de CSS */
 
-            opacity: 0.8;
-        }
+.exemplo {
 
+    background:#1565c0;
 
-        /*
-            Área onde será exibido o resultado do quiz.
-        */
-        #resultado {
+    color:white;
 
-            margin-top: 20px;
+    padding:20px;
 
-            font-weight: bold;
+    text-align:center;
 
-            font-size: 18px;
-        }
+    border-radius:10px;
+
+}
 
 
-        /*
-            Responsividade:
 
-            Esta regra altera alguns elementos
-            quando a tela possui menos de 600px,
-            como acontece em celulares.
-        */
-        @media(max-width:600px){
+button {
 
-            .container{
+    background:#1565c0;
 
-                padding:20px;
-            }
+    color:white;
 
-            h1{
+    border:none;
 
-                font-size:24px;
-            }
+    padding:12px 20px;
 
-        }
+    border-radius:6px;
+
+    cursor:pointer;
+
+}
 
 
-    </style>
+button:hover {
+
+    opacity:.8;
+
+}
+
+
+
+input, select {
+
+    padding:8px;
+
+    margin:5px;
+
+}
+
+
+
+.resultado {
+
+    margin-top:20px;
+
+    padding:15px;
+
+    background:#eee;
+
+    border-radius:8px;
+
+}
+
+
+
+/* Responsividade */
+
+@media(max-width:600px){
+
+.container{
+
+    padding:15px;
+
+}
+
+
+h1{
+
+    font-size:24px;
+
+}
+
+}
+
+
+</style>
+
 
 </head>
 
@@ -182,206 +181,436 @@
 <div class="container">
 
 
-    <!--
-        TÍTULO DO RECURSO EDUCACIONAL
-
-        Apresenta o tema principal do material.
-    -->
-    <h1>Introdução ao CSS</h1>
+<h1>Introdução ao CSS</h1>
 
 
+<div class="box">
 
-    <h2>Objetivo de Aprendizagem</h2>
+<h2>Objetivo de Aprendizagem</h2>
 
-    <p>
+<p>
 
-        Ao finalizar este recurso educacional, o estudante será capaz
-        de compreender o conceito de CSS e identificar sua importância
-        na construção de páginas web.
+Ao finalizar este recurso, o estudante será capaz de compreender
+o conceito de CSS, identificar sua função no desenvolvimento web
+e aplicar estilos básicos em páginas HTML.
 
-    </p>
+</p>
+
+</div>
 
 
 
-    <h2>O que é CSS?</h2>
+<h2>1. O que é CSS?</h2>
 
 
-    <p>
+<p>
 
-        CSS significa <strong>Cascading Style Sheets</strong>,
-        ou Folhas de Estilo em Cascata.
+CSS significa <strong>Cascading Style Sheets</strong>
+(Folhas de Estilo em Cascata).
 
-    </p>
+É uma linguagem utilizada para definir a aparência dos elementos HTML.
 
-
-    <p>
-
-        O CSS é uma linguagem utilizada para definir a aparência
-        dos elementos HTML de uma página web.
-
-        Com CSS podemos modificar cores, fontes, tamanhos,
-        espaçamentos e posicionamento dos elementos.
-
-    </p>
+</p>
 
 
+<p>
 
-    <h2>Exemplo prático</h2>
+Com CSS podemos modificar:
+
+</p>
 
 
-    <!--
-        Este elemento demonstra na prática
-        como o CSS modifica a aparência de
-        um elemento HTML.
-    -->
+<ul>
 
-    <div class="exemplo-css">
+<li>Cores</li>
 
-        Este texto está estilizado utilizando CSS.
+<li>Fontes</li>
 
-    </div>
+<li>Tamanhos</li>
+
+<li>Espaçamentos</li>
+
+<li>Posicionamento dos elementos</li>
+
+</ul>
 
 
 
-    <h2>CSS e HTML trabalham juntos</h2>
+
+<h2>2. HTML e CSS trabalham juntos</h2>
 
 
-    <p>
+<p>
 
-        O HTML cria a estrutura da página,
-        enquanto o CSS define sua apresentação visual.
+O HTML cria a estrutura da página.
 
-    </p>
+O CSS define sua aparência visual.
 
-
-    <p>
-
-        Exemplo:
-
-    </p>
+</p>
 
 
-    <pre>
+<div class="exemplo">
 
-HTML:
-&lt;h1&gt;Olá Mundo&lt;/h1&gt;
+Este texto foi estilizado usando CSS.
+
+</div>
 
 
-CSS:
 
-h1 {
-    color: blue;
+<h2>3. Seletores CSS</h2>
+
+
+<p>
+
+Seletores indicam quais elementos HTML receberão determinado estilo.
+
+</p>
+
+
+<pre>
+
+Exemplo:
+
+p {
+
+color: blue;
+
 }
 
-    </pre>
+</pre>
 
 
 
-    <h2>Teste seus conhecimentos</h2>
+<h2>4. Classes e IDs</h2>
 
 
-    <!--
-        Pequeno quiz interativo.
+<p>
 
-        O objetivo é fornecer feedback imediato
-        ao estudante, tornando o recurso mais dinâmico.
-    -->
+As classes permitem aplicar estilos em vários elementos.
 
+Os IDs identificam um elemento específico.
 
-    <p>
-        <strong>
-        Qual é a principal função do CSS?
-        </strong>
-    </p>
+</p>
 
 
-    <label>
+<pre>
 
-        <input type="radio" name="questao">
+.classe {
 
-        Criar bancos de dados
+color:red;
 
-    </label>
-
-    <br>
+}
 
 
-    <label>
+#identificador {
 
-        <input type="radio" name="questao">
+font-size:20px;
 
-        Criar servidores web
+}
 
-    </label>
-
-    <br>
-
-
-    <label>
-
-        <input type="radio" name="questao" id="resposta">
-
-        Estilizar páginas HTML
-
-    </label>
-
-
-    <br><br>
+</pre>
 
 
 
-    <!--
-        Ao clicar no botão,
-        a função JavaScript será executada.
-    -->
-
-    <button onclick="verificarResposta()">
-
-        Verificar resposta
-
-    </button>
+<h2>5. Laboratório CSS</h2>
 
 
+<p>
 
-    <div id="resultado"></div>
+Experimente modificar o texto abaixo utilizando propriedades CSS.
 
-
-
-    <hr>
-
+</p>
 
 
-    <h2>Informações do Recurso</h2>
+<label for="texto">
+
+Texto:
+
+</label>
 
 
-    <p>
-
-        <strong>Ferramentas utilizadas:</strong>
-
-        HTML5, CSS3 e JavaScript.
-
-    </p>
+<input id="texto" value="Aprendendo CSS">
 
 
-    <p>
-
-        <strong>Licença:</strong>
-
-        Creative Commons Attribution 4.0 International
-        (CC BY 4.0).
-
-    </p>
+<br>
 
 
-    <p>
+<label for="cor">
 
-        Este recurso pode ser considerado um
-        <strong>Recurso Educacional Aberto (REA)</strong>,
-        pois está disponível publicamente e permite
-        reutilização e adaptação mediante atribuição
-        da autoria.
+Cor:
 
-    </p>
+</label>
+
+
+<input type="color" id="cor" value="#1565c0">
+
+
+<br>
+
+
+<label for="tamanho">
+
+Tamanho:
+
+</label>
+
+
+<select id="tamanho">
+
+<option value="16px">
+
+Pequeno
+
+</option>
+
+
+<option value="24px">
+
+Médio
+
+</option>
+
+
+<option value="36px">
+
+Grande
+
+</option>
+
+
+</select>
+
+
+<br><br>
+
+
+<button onclick="aplicarEstilo()">
+
+Aplicar CSS
+
+</button>
+
+
+
+<div id="laboratorio" class="resultado">
+
+Aprendendo CSS
+
+</div>
+
+
+
+
+<h2>6. Desafio Prático</h2>
+
+
+<p>
+
+Qual propriedade CSS altera a cor do texto?
+
+</p>
+
+
+<select id="desafio">
+
+<option>
+
+background-color
+
+</option>
+
+
+<option>
+
+color
+
+</option>
+
+
+<option>
+
+margin
+
+</option>
+
+
+</select>
+
+
+<button onclick="verificarDesafio()">
+
+Responder
+
+</button>
+
+
+<div id="resultadoDesafio"></div>
+
+
+
+
+<h2>7. Quiz Final</h2>
+
+
+<p>
+<strong>
+1) CSS é utilizado para:
+</strong>
+</p>
+
+
+<input type="radio" name="q1" value="0">
+
+Criar banco de dados
+
+<br>
+
+<input type="radio" name="q1" value="1">
+
+Estilizar páginas HTML
+
+<br>
+
+<input type="radio" name="q1" value="0">
+
+Criar servidores
+
+
+<br><br>
+
+
+
+<p>
+<strong>
+2) HTML representa:
+</strong>
+</p>
+
+
+<input type="radio" name="q2" value="1">
+
+Estrutura da página
+
+<br>
+
+<input type="radio" name="q2" value="0">
+
+Apenas cores
+
+
+<br><br>
+
+
+
+<p>
+<strong>
+3) Qual propriedade muda a cor do texto?
+</strong>
+</p>
+
+
+<input type="radio" name="q3" value="1">
+
+color
+
+<br>
+
+<input type="radio" name="q3" value="0">
+
+margin
+
+
+<br><br>
+
+
+
+<p>
+<strong>
+4) Uma classe CSS começa com:
+</strong>
+</p>
+
+
+<input type="radio" name="q4" value="1">
+
+.
+
+<br>
+
+<input type="radio" name="q4" value="0">
+
+#
+
+<br><br>
+
+
+
+<p>
+<strong>
+5) CSS significa:
+</strong>
+</p>
+
+
+<input type="radio" name="q5" value="1">
+
+Cascading Style Sheets
+
+<br>
+
+<input type="radio" name="q5" value="0">
+
+Computer Style System
+
+
+
+<br><br>
+
+
+<button onclick="corrigirQuiz()">
+
+Ver resultado
+
+</button>
+
+
+<div id="resultadoQuiz" class="resultado"></div>
+
+
+
+
+<hr>
+
+
+<h2>Informações do Recurso</h2>
+
+
+<p>
+
+<strong>Tecnologias utilizadas:</strong>
+
+HTML5, CSS3 e JavaScript.
+
+</p>
+
+
+<p>
+
+<strong>Licença:</strong>
+
+Creative Commons CC BY 4.0.
+
+</p>
+
+
+<p>
+
+Este recurso pode ser considerado um
+<strong>Recurso Educacional Aberto (REA)</strong>,
+pois está disponível publicamente e permite reutilização,
+adaptação e compartilhamento mediante atribuição da autoria.
+
+</p>
 
 
 
@@ -389,58 +618,104 @@ h1 {
 
 
 
-<!--
-
-    JAVASCRIPT
-
-    Responsável pela interação do quiz.
-
--->
-
 <script>
 
 
-function verificarResposta(){
+// Laboratório CSS
+
+function aplicarEstilo(){
 
 
-    /*
-        Verifica se o estudante marcou
-        a alternativa correta.
-    */
+let texto=document.getElementById("texto").value;
+
+let cor=document.getElementById("cor").value;
+
+let tamanho=document.getElementById("tamanho").value;
 
 
-    let resposta = document.getElementById("resposta");
+let resultado=document.getElementById("laboratorio");
 
 
-    let resultado = document.getElementById("resultado");
+resultado.innerHTML=texto;
+
+resultado.style.color=cor;
+
+resultado.style.fontSize=tamanho;
+
+
+}
 
 
 
-    if(resposta.checked){
+
+// Desafio
+
+function verificarDesafio(){
 
 
-        resultado.innerHTML =
-
-        "✅ Correto! O CSS é utilizado para estilizar páginas HTML.";
+let resposta=document.getElementById("desafio").value;
 
 
-    }
-
-    else{
+if(resposta=="color"){
 
 
-        resultado.innerHTML =
+document.getElementById("resultadoDesafio").innerHTML=
 
-        "❌ Tente novamente. O CSS controla a aparência das páginas.";
+"✅ Correto! A propriedade color altera a cor do texto.";
 
-    }
+
+}
+
+else{
+
+
+document.getElementById("resultadoDesafio").innerHTML=
+
+"❌ Incorreto. A propriedade correta é color.";
+
+}
+
+
+}
+
+
+
+// Quiz
+
+function corrigirQuiz(){
+
+
+let pontos=0;
+
+
+for(let i=1;i<=5;i++){
+
+
+let resposta=document.querySelector(
+'input[name="q'+i+'"]:checked'
+);
+
+
+if(resposta && resposta.value=="1"){
+
+pontos++;
+
+}
+
+
+}
+
+
+document.getElementById("resultadoQuiz").innerHTML=
+
+"Você acertou "+pontos+" de 5 questões.";
+
 
 
 }
 
 
 </script>
-
 
 
 </body>

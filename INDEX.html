@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <!-- Define o conjunto de caracteres utilizado pela página -->
+    <meta charset="UTF-8">
+
+    <!-- Permite que a página se adapte a celulares, tablets e computadores -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Título que aparece na aba do navegador -->
+    <title>Introdução ao CSS - Recurso Educacional</title>
+
+
+    <!--
+        CSS INTERNO
+
+        Nesta parte definimos a aparência visual da página.
+        O CSS é responsável por cores, fontes, espaçamentos
+        e organização dos elementos.
+    -->
+    <style>
+
+        /*
+            Configuração geral da página.
+            Define fonte, cor de fundo e espaçamento.
+        */
+        body {
+
+            font-family: Arial, Helvetica, sans-serif;
+
+            background-color: #f2f2f2;
+
+            margin: 0;
+
+            padding: 20px;
+
+            line-height: 1.6;
+        }
+
+
+        /*
+            Área principal do recurso educacional.
+            Criamos um "cartão" branco para facilitar
+            a leitura do conteúdo.
+        */
+        .container {
+
+            max-width: 900px;
+
+            margin: auto;
+
+            background-color: white;
+
+            padding: 30px;
+
+            border-radius: 10px;
+
+            box-shadow: 0px 0px 10px #ccc;
+        }
+
+
+        /*
+            Título principal.
+        */
+        h1 {
+
+            color: #1565c0;
+
+            text-align: center;
+        }
+
+
+        /*
+            Títulos das seções.
+        */
+        h2 {
+
+            color: #333;
+
+            border-bottom: 2px solid #1565c0;
+
+            padding-bottom: 5px;
+        }
+
+
+        /*
+            Caixa utilizada para apresentar
+            um exemplo visual de CSS.
+        */
+        .exemplo-css {
+
+            background-color: #1565c0;
+
+            color: white;
+
+            padding: 20px;
+
+            text-align: center;
+
+            border-radius: 8px;
+
+            margin: 20px 0;
+        }
+
+
+        /*
+            Estilização do botão do quiz.
+        */
+        button {
+
+            background-color: #1565c0;
+
+            color: white;
+
+            border: none;
+
+            padding: 12px 20px;
+
+            border-radius: 5px;
+
+            cursor: pointer;
+
+            font-size: 16px;
+        }
+
+
+        /*
+            Quando o usuário passa o mouse no botão,
+            alteramos sua aparência.
+        */
+        button:hover {
+
+            opacity: 0.8;
+        }
+
+
+        /*
+            Área onde será exibido o resultado do quiz.
+        */
+        #resultado {
+
+            margin-top: 20px;
+
+            font-weight: bold;
+
+            font-size: 18px;
+        }
+
+
+        /*
+            Responsividade:
+
+            Esta regra altera alguns elementos
+            quando a tela possui menos de 600px,
+            como acontece em celulares.
+        */
+        @media(max-width:600px){
+
+            .container{
+
+                padding:20px;
+            }
+
+            h1{
+
+                font-size:24px;
+            }
+
+        }
+
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+    <!--
+        TÍTULO DO RECURSO EDUCACIONAL
+
+        Apresenta o tema principal do material.
+    -->
+    <h1>Introdução ao CSS</h1>
+
+
+
+    <h2>Objetivo de Aprendizagem</h2>
+
+    <p>
+
+        Ao finalizar este recurso educacional, o estudante será capaz
+        de compreender o conceito de CSS e identificar sua importância
+        na construção de páginas web.
+
+    </p>
+
+
+
+    <h2>O que é CSS?</h2>
+
+
+    <p>
+
+        CSS significa <strong>Cascading Style Sheets</strong>,
+        ou Folhas de Estilo em Cascata.
+
+    </p>
+
+
+    <p>
+
+        O CSS é uma linguagem utilizada para definir a aparência
+        dos elementos HTML de uma página web.
+
+        Com CSS podemos modificar cores, fontes, tamanhos,
+        espaçamentos e posicionamento dos elementos.
+
+    </p>
+
+
+
+    <h2>Exemplo prático</h2>
+
+
+    <!--
+        Este elemento demonstra na prática
+        como o CSS modifica a aparência de
+        um elemento HTML.
+    -->
+
+    <div class="exemplo-css">
+
+        Este texto está estilizado utilizando CSS.
+
+    </div>
+
+
+
+    <h2>CSS e HTML trabalham juntos</h2>
+
+
+    <p>
+
+        O HTML cria a estrutura da página,
+        enquanto o CSS define sua apresentação visual.
+
+    </p>
+
+
+    <p>
+
+        Exemplo:
+
+    </p>
+
+
+    <pre>
+
+HTML:
+&lt;h1&gt;Olá Mundo&lt;/h1&gt;
+
+
+CSS:
+
+h1 {
+    color: blue;
+}
+
+    </pre>
+
+
+
+    <h2>Teste seus conhecimentos</h2>
+
+
+    <!--
+        Pequeno quiz interativo.
+
+        O objetivo é fornecer feedback imediato
+        ao estudante, tornando o recurso mais dinâmico.
+    -->
+
+
+    <p>
+        <strong>
+        Qual é a principal função do CSS?
+        </strong>
+    </p>
+
+
+    <label>
+
+        <input type="radio" name="questao">
+
+        Criar bancos de dados
+
+    </label>
+
+    <br>
+
+
+    <label>
+
+        <input type="radio" name="questao">
+
+        Criar servidores web
+
+    </label>
+
+    <br>
+
+
+    <label>
+
+        <input type="radio" name="questao" id="resposta">
+
+        Estilizar páginas HTML
+
+    </label>
+
+
+    <br><br>
+
+
+
+    <!--
+        Ao clicar no botão,
+        a função JavaScript será executada.
+    -->
+
+    <button onclick="verificarResposta()">
+
+        Verificar resposta
+
+    </button>
+
+
+
+    <div id="resultado"></div>
+
+
+
+    <hr>
+
+
+
+    <h2>Informações do Recurso</h2>
+
+
+    <p>
+
+        <strong>Ferramentas utilizadas:</strong>
+
+        HTML5, CSS3 e JavaScript.
+
+    </p>
+
+
+    <p>
+
+        <strong>Licença:</strong>
+
+        Creative Commons Attribution 4.0 International
+        (CC BY 4.0).
+
+    </p>
+
+
+    <p>
+
+        Este recurso pode ser considerado um
+        <strong>Recurso Educacional Aberto (REA)</strong>,
+        pois está disponível publicamente e permite
+        reutilização e adaptação mediante atribuição
+        da autoria.
+
+    </p>
+
+
+
+</div>
+
+
+
+<!--
+
+    JAVASCRIPT
+
+    Responsável pela interação do quiz.
+
+-->
+
+<script>
+
+
+function verificarResposta(){
+
+
+    /*
+        Verifica se o estudante marcou
+        a alternativa correta.
+    */
+
+
+    let resposta = document.getElementById("resposta");
+
+
+    let resultado = document.getElementById("resultado");
+
+
+
+    if(resposta.checked){
+
+
+        resultado.innerHTML =
+
+        "✅ Correto! O CSS é utilizado para estilizar páginas HTML.";
+
+
+    }
+
+    else{
+
+
+        resultado.innerHTML =
+
+        "❌ Tente novamente. O CSS controla a aparência das páginas.";
+
+    }
+
+
+}
+
+
+</script>
+
+
+
+</body>
+
+</html>
